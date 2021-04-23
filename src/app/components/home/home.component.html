@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div class="home-page">
+    <div class="title-bar">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar ></div>
+              <mat-card-title>{{ title }}</mat-card-title>
+              <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
+            </mat-card-header>      
+        </mat-card>
+    </div>
+    <div class="butto-class">
+        <button mat-raised-button class="butto-class" (click)="state =! state">
+            ver productos
+        </button>
+        
+        <button mat-raised-button class="butto-class">
+            Añadir productos
+        </button>
+
+        <button mat-raised-button class="butto-class">
+            Eliminar productos
+        </button>
+    </div>
+    
+    <div class="table-div" *ngIf="state">
+        <app-product-list></app-product-list> 
+    </div>
+    
+
+</div>

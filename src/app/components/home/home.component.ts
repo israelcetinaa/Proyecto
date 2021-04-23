@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public title:string = "Proyecto Webapp";
+  public subtitle: string = "Gestiona tu lista de videojuegos";
+  public state:boolean;
 
-  constructor() { }
+  constructor() { 
+    this.state = false;
+  }
 
   ngOnInit(): void {
   }

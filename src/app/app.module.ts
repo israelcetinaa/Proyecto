@@ -10,12 +10,18 @@ import { RegisterUserComponent } from './components/register-user/register-user.
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from "@angular/router";
 import { ROUTES } from "./app.routes";
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { AddProductsComponent } from './components/add-products/add-products.component';
+import { DeleteProductsComponent } from './components/delete-products/delete-products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterUserComponent,
-    HomeComponent
+    HomeComponent,
+    ProductListComponent,
+    AddProductsComponent,
+    DeleteProductsComponent
   ],
   imports: [
     BrowserModule,

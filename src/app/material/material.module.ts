@@ -7,6 +7,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatIconModule } from "@angular/material/icon";
+import { MatTableModule } from '@angular/material/table'  
 
 
 const MaterialComponents = [
@@ -16,7 +17,8 @@ const MaterialComponents = [
   MatTabsModule,
   MatFormFieldModule,
   MatCheckboxModule,
-  MatIconModule
+  MatIconModule,
+  MatTableModule
 ];
 @NgModule({
   

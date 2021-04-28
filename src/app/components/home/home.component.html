@@ -9,22 +9,33 @@
         </mat-card>
     </div>
     <div class="butto-class">
-        <button mat-raised-button class="butto-class" (click)="state =! state">
+        <button mat-raised-button class="butto-class" (click)="view =! view">
             ver productos
         </button>
         
-        <button mat-raised-button class="butto-class">
+        <button mat-raised-button class="butto-class" (click)="add =! add">
             Añadir productos
         </button>
 
-        <button mat-raised-button class="butto-class">
+        <button mat-raised-button class="butto-class" (click)="delete =! delete">
             Eliminar productos
         </button>
     </div>
     
-    <div class="table-div" *ngIf="state">
+    <div class="table-div" *ngIf="view">
         <app-product-list></app-product-list> 
     </div>
+
+    <div class="table-div" *ngIf="add">
+        <app-add-products></app-add-products> 
+    </div>
+
+    <div class="table-div" *ngIf="delete">
+        <app-delete-products></app-delete-products> 
+    </div>
+
+
+    
     
 
 </div>

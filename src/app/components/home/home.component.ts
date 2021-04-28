@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   public title:string = "Proyecto Webapp";
   public subtitle: string = "Gestiona tu lista de videojuegos";
-  public state:boolean;
+  public view:boolean;
+  public add:boolean;
+  public delete:boolean;
 
   constructor() { 
-    this.state = false;
+    this.view = false;
+    this.add = false;
+    this.delete = false;
   }
 
   ngOnInit(): void {

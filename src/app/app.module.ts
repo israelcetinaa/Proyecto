@@ -13,6 +13,7 @@ import { ROUTES } from "./app.routes";
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { DeleteProductsComponent } from './components/delete-products/delete-products.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DeleteProductsComponent } from './components/delete-products/delete-pro
     HomeComponent,
     ProductListComponent,
     AddProductsComponent,
-    DeleteProductsComponent
+    DeleteProductsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

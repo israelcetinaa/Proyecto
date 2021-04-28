@@ -1,20 +1,30 @@
 import { Injectable } from '@angular/core';
 import { VideoJuegos } from "../models/data.interface";
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  private games: Array<VideoJuegos> = [];   
+
+  private games: VideoJuegos[]; 
+  private games$: Subject<VideoJuegos[]>;
+
+ 
   constructor() {
-    this.games[0] = {
-      name : 'Devil may cry 5',
-      clasification : 'PEGI +18',
-      year: '2019',
-      type: 'RPG - H&S'
-    };
+    this.games = [];
+    this.games$ = new Subject();
    }
 
-   
+  addArray(data:VideoJuegos){
+    this.games.push(data);
+    console.log("agregando objetos al arrar");
+    console.log(this.games);
+    this.games$.next(this.games);
+  }   
+
+  getGames$(): Observable<VideoJuegos[]>{
+    return this.games$.asObservable();
+  }
 
 }

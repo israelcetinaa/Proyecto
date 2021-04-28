@@ -1,1 +1,36 @@
-<p>add-products works!</p>
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Agregue un videojuego</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        
+        <form class="example-form">       
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Nombre del juego</mat-label>
+                <input matInput required name="name" ngModel #name="ngModel" minlength="4" [(ngModel)]="data.name">
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Clasificación del juego</mat-label>
+                <input matInput  required name="clas" ngModel #clas="ngModel" minlength="4" [(ngModel)]="data.clasification">
+              </mat-form-field></td>
+            </tr></table>
+            <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Año de salida</mat-label>
+                  <input matInput  required name="year" ngModel #year="ngModel" minlength="2" maxlength="4" [(ngModel)]="data.year">
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Tipo de juego</mat-label>
+                  <input matInput  required name="tip" ngModel #tip="ngModel" minlength="4" [(ngModel)]="data.type">
+                </mat-form-field></td>
+              </tr></table>
+          </form>
+          
+        
+    </mat-card-content>
+    <mat-card-actions class="buttons-card">
+      <button mat-button (click)="confirmFunct()">Confirmar</button>
+      <button mat-button (click)="cancelFunct()">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>

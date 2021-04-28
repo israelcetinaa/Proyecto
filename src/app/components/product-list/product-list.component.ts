@@ -9,23 +9,26 @@ import { VideoJuegos } from "../../models/data.interface";
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
-  public displayedColumns: string[] = ['name', 'clasification', 'year', 'type'];
-  private gameData: Array<VideoJuegos> = [];
-  public  dataSource = this.gameData;
+
+  public gameData: Array<VideoJuegos> = [];
+  displayedColumns: string[] = ['name', 'clasification', 'year', 'type'];
+  dataSource = this.gameData;
+  
   constructor(
     private dateServ: ProductsService
-  ){
-    this.gameData[0] = {
-      name : '',
-      clasification : '',
-      year: '',
-      type: ''
-    };
-  }
+  ){ 
+    this.gameData = [];
+   }
 
   ngOnInit(){
+    this.dateServ.getGames$().subscribe( games => {
+      this.gameData = games;
+      console.warn("subscribe al servicio hecho");
+      console.warn(this.gameData);
+    });
     
   }
-    
+
+  
 }
 

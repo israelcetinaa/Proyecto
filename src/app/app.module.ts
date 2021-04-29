@@ -14,6 +14,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { DeleteProductsComponent } from './components/delete-products/delete-products.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ProductListComponent,
     AddProductsComponent,
     DeleteProductsComponent,
-    NavbarComponent
+    NavbarComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES,{useHash:true})
+    RouterModule.forRoot(ROUTES,{useHash:true}),
   ],
   providers: [],
   bootstrap: [AppComponent]

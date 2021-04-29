@@ -18,13 +18,16 @@ export class ProductsService {
 
   addArray(data:VideoJuegos){
     this.games.push(data);
-    console.log("agregando objetos al arrar");
-    console.log(this.games);
     this.games$.next(this.games);
   }   
 
   getGames$(): Observable<VideoJuegos[]>{
     return this.games$.asObservable();
+  }
+
+  deleteArray(index:string){
+    this.games.splice(parseInt(index),1);
+    this.games$.next(this.games);
   }
 
 }
